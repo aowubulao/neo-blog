@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="mdui-appbar mdui-appbar-fixed" style="background-color: white; z-index: 9988">
+        <div class="mdui-appbar mdui-appbar-fixed mdui-shadow-2" style="background-color: white; z-index: 9988">
             <div class="mdui-toolbar">
                 <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
                     <i class="mdui-icon material-icons">menu</i>
@@ -86,7 +86,7 @@
             },
             getCategories: async function () {
                 const axios = require('axios');
-                let ret = await axios.get("/blog/category/").then(ret => {
+                let ret = await axios.get("/blog/category").then(ret => {
                     this.categories = ret.data;
                 }).catch(error => {
 
@@ -102,7 +102,7 @@
             },
             goPost(id) {
                 this.$router.push({ path: '/post/' + id })
-            }
+            },
         }
     }
 </script>

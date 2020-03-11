@@ -1,7 +1,7 @@
 <template>
     <div    class="mdui-container"
-            style="padding-top: 30px; padding-left: 10px; padding-right: 10px">
-        <div style="font-size: 1.8em">{{ post.postTitle }}</div>
+            style="padding-top: 50px; padding-left: 10px; padding-right: 10px; max-width: 800px; min-width: 300px">
+        <div style="font-size: 1.8em; font-weight: 600">{{ post.postTitle }}</div>
         <div style="margin-top: 15px; color: gray">
             {{ post.postDate }} / {{ post.postCategory }}
         </div>
@@ -12,7 +12,7 @@
                       :editable="false"
                       defaultOpen="preview"
                       :boxShadow="false"
-                      previewBackground="white"
+                      previewBackground="#FAFAFA"
                       codeStyle="github"
                       v-model="post.postContent"/>
     </div>

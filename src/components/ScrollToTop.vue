@@ -24,6 +24,9 @@
                 hidden: true,
             }
         },
+        mounted() {
+            window.addEventListener('scroll', this.onScroll, true);
+        },
         methods: {
             onScroll () {
                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
@@ -40,9 +43,6 @@
                     behavior: "smooth"
                 });
             },
-        },
-        mounted() {
-            window.addEventListener('scroll', this.onScroll, true);
         }
     }
 </script>

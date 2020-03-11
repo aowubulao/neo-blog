@@ -1,10 +1,10 @@
 <template>
     <div style="min-width: 300px; max-width: 800px" class="mdui-center">
-        <transition name="slide-fade" mode="out-in">
+        <transition name="fade" mode="out-in">
             <div v-show="isShow">
                 <div class="mdui-center" v-for="post in posts" :key="post">
                     <v-card class="mx-auto" width="100%">
-                        <v-img class="white&#45;&#45;text align-end" height="200px"
+                        <v-img height="200px"
                                :src="setPostImgUrl(post.postImgUrl)">
                         </v-img>
                         <v-card-title style="font-size: 1.4em;font-weight: 500; letter-spacing: 1px">{{ post.postTitle }}</v-card-title>
@@ -23,17 +23,18 @@
                     </v-card>
                     <div style="margin-top: 20px"></div>
                 </div>
-                <v-btn  v-if="hasMore"
-                        text  :loading="isGetMoreLoading"
-                        style="align-content: center" width="100%"
-                        @click="getMore">
-                    加载更多
-                </v-btn>
-                <div v-if="!hasMore" style="width: 100%; height: 30px; text-align: center; font-size: 14px">
-                    没有更多了
-                </div>
             </div>
         </transition>
+
+        <v-btn  v-if="hasMore"
+                text  :loading="isGetMoreLoading"
+                style="align-content: center" width="100%"
+                @click="getMore">
+            加载更多
+        </v-btn>
+        <div v-if="!hasMore" style="width: 100%; height: 30px; text-align: center; font-size: 14px">
+            没有更多了
+        </div>
     </div>
 </template>
 
