@@ -22,9 +22,9 @@
         },
 
         created() {
+            console.log("%c Powered By Neo =w= ","color: white;background: #fc5185; padding:5px 0; border: 1px solid #fc5185;");
             this.checkUA();
             this.hello();
-            this.getBlogInfo();
         },
         methods: {
             hello: async function () {
