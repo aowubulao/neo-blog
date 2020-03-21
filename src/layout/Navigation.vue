@@ -15,11 +15,11 @@
             <img    style="width: 128px; height: 128px; margin-top: 30px; margin-left: 70px"
                     class="mdui-img-circle" src="https://s2.ax1x.com/2020/03/08/3xSwlt.png" alt="Neo" />
             <ul class="mdui-list" style="margin-top: 20px" mdui-collapse="{accordion: true}">
-                <li class="mdui-list-item mdui-ripple">
+                <li class="mdui-list-item mdui-ripple" @click="goHome">
                     <i class="mdui-list-item-icon mdui-icon material-icons" style="color: #1976D2">
                         move_to_inbox
                     </i>
-                    <div class="mdui-list-item-content list-item-title" @click="goHome">首页</div>
+                    <div class="mdui-list-item-content list-item-title">首页</div>
                 </li>
                 <li class="mdui-collapse-item mdui-collapse-item-open">
                     <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
