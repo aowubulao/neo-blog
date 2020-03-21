@@ -13,7 +13,7 @@
                       defaultOpen="preview"
                       :boxShadow="false"
                       previewBackground="#FAFAFA"
-                      codeStyle="github"
+                      codeStyle="dark"
                       v-model="post.postContent"/>
     </div>
 </template>

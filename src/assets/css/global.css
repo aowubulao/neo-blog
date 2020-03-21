@@ -16,6 +16,13 @@ body {
     color: #333;
 }
 
+p {
+    text-align: justify;
+}
+li {
+    text-align: justify;
+}
+
 footer {
     text-align: center;
     margin-bottom: 20px;
